@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:ietiansdiary/services/googleAuth.dart';
 
 class LoginUI extends StatefulWidget {
   //const LoginUI({super.key});
@@ -10,6 +13,9 @@ class LoginUI extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<LoginUI> {
+  String? email;
+  String? username;
+  Authentication auth=Authentication();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -82,8 +88,8 @@ class _MyWidgetState extends State<LoginUI> {
                                           height: 81,
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                                image: NetworkImage(
-                                                    "https://logixtics.nldsl.in/assets/images/login-logo.png"),
+                                                image: AssetImage(
+                                                    "assets/login-logo.png"),
                                                 fit: BoxFit.fitWidth),
                                           ))),
                                 ])),
@@ -99,9 +105,32 @@ class _MyWidgetState extends State<LoginUI> {
                             const SizedBox(height: 100.0),
                             //google container
                             InkWell(
-                              onTap: () {
-                                print("GOOGLE AUTHENTIFICATION CALLED");
-                                //google authentification ka function yaha par lagana hai
+
+                              onTap: ()async {print(username);
+                                //Login Functionality called here
+                                // print("google sign in tapped");
+                              if(username==null) {
+                                UserCredential data=await auth.signInWithGoogle();
+                                //setting state variables
+                                setState(() {
+                                  username = auth.username;
+                                  email = auth.email;
+                                });
+                                //for debug purpose printing auth email and username
+                                print(
+                                    "GOOGLE AUTHENTIFICATION CALLED  $username and $email...");
+                              }else{
+                                // to
+
+                                await FirebaseAuth.instance.signOut() ;
+                                await GoogleSignIn().signOut();
+
+                                setState(() {
+                                  username=null;
+                                  email=null;
+                                });}
+                                // print("GOOGLE AUTHENTIFICATION CALLED $username and $email...");
+
                               },
                               child: Container(
                                 width: 93,
@@ -111,8 +140,8 @@ class _MyWidgetState extends State<LoginUI> {
                                     borderRadius: BorderRadius.all(
                                         Radius.elliptical(93, 93)),
                                     image: DecorationImage(
-                                        image: NetworkImage(
-                                            "https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png"))),
+                                        image: AssetImage(
+                                            "assets/profile_vrt_raw_bytes_1587515358_10512.png"))),
                               ),
                             ),
                           ],
