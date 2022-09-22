@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "458998018924",
+    "project_id": "ietians-diary",
+    "storage_bucket": "ietians-diary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458998018924:android:b444341a89cc893f6b7949",
+        "android_client_info": {
+          "package_name": "com.example.ietiansdiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458998018924-ove9q8uf62je5lp814bv1ace54e60l1q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ietiansdiary",
+            "certificate_hash": "f330f0b2f4cfafe2c04f4c2e82a74ec962bb0f9c"
+          }
+        },
+        {
+          "client_id": "458998018924-7eenfb1oaj01hetmhuho5ihoqk5q4h2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM-ZBlYAOqF-dNOG4LaKRHPuW0TCvGSGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458998018924-7eenfb1oaj01hetmhuho5ihoqk5q4h2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
