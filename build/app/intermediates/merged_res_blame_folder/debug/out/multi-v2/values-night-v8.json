@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\ietiansDiary\\IETians_Diary\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "E:\\IETDOfficial\\ietians-diary-updated\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "E:\\ietiansDiary\\IETians_Diary\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "E:\\IETDOfficial\\ietians-diary-updated\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

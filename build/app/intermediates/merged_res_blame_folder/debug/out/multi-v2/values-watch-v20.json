@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\ietiansDiary\\IETians_Diary\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "E:\\IETDOfficial\\ietians-diary-updated\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
                     "source": "C:\\Users\\chauh\\.gradle\\caches\\transforms-2\\files-2.1\\419daf5587e1405ccd0f7038649e2934\\jetified-play-services-auth-20.0.1\\res\\values-watch-v20\\values.xml",

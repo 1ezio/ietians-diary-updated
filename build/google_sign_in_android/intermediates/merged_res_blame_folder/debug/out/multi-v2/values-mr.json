@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\ietiansDiary\\IETians_Diary\\build\\google_sign_in_android\\intermediates\\res\\merged\\debug\\values-mr\\values-mr.xml",
+            "outputFile": "E:\\IETDOfficial\\ietians-diary-updated\\build\\google_sign_in_android\\intermediates\\res\\merged\\debug\\values-mr\\values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\chauh\\.gradle\\caches\\transforms-2\\files-2.1\\cc67751070ba8f7377d63ab76544c726\\jetified-play-services-base-18.0.1\\res\\values-mr\\values.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "E:\\ietiansDiary\\IETians_Diary\\build\\google_sign_in_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "E:\\IETDOfficial\\ietians-diary-updated\\build\\google_sign_in_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\chauh\\.gradle\\caches\\transforms-2\\files-2.1\\cc67751070ba8f7377d63ab76544c726\\jetified-play-services-base-18.0.1\\res\\values-mr\\values.xml",

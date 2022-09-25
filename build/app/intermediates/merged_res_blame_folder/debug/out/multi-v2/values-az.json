@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\ietiansDiary\\IETians_Diary\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "outputFile": "E:\\IETDOfficial\\ietians-diary-updated\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
             "map": [
                 {
                     "source": "C:\\Users\\chauh\\.gradle\\caches\\transforms-2\\files-2.1\\cc67751070ba8f7377d63ab76544c726\\jetified-play-services-base-18.0.1\\res\\values-az\\values.xml",

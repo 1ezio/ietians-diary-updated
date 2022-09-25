@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\ietiansDiary\\IETians_Diary\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\IETDOfficial\\ietians-diary-updated\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\chauh\\.gradle\\caches\\transforms-2\\files-2.1\\f910e53d48c9bb13b167634611201768\\core-1.6.0\\res\\values\\values.xml",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "E:\\ietiansDiary\\IETians_Diary\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "E:\\IETDOfficial\\ietians-diary-updated\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -56,23 +56,6 @@
                         "endLines": "141,144",
                         "endColumns": "12,12",
                         "endOffsets": "10281,10450"
-                    }
-                },
-                {
-                    "source": "E:\\ietiansDiary\\IETians_Diary\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,711",
-                        "endColumns": "143,81,103,108,119,96,73",
-                        "endOffsets": "194,276,380,489,609,706,780"
-                    },
-                    "to": {
-                        "startLines": "126,130,131,132,133,134,135",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "8973,9332,9414,9518,9627,9747,9844",
-                        "endColumns": "143,81,103,108,119,96,73",
-                        "endOffsets": "9112,9409,9513,9622,9742,9839,9913"
                     }
                 },
                 {
@@ -128,6 +111,23 @@
                         "startOffsets": "6434,7612",
                         "endColumns": "67,166",
                         "endOffsets": "6497,7774"
+                    }
+                },
+                {
+                    "source": "E:\\IETDOfficial\\ietians-diary-updated\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,711",
+                        "endColumns": "143,81,103,108,119,96,73",
+                        "endOffsets": "194,276,380,489,609,706,780"
+                    },
+                    "to": {
+                        "startLines": "126,130,131,132,133,134,135",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "8973,9332,9414,9518,9627,9747,9844",
+                        "endColumns": "143,81,103,108,119,96,73",
+                        "endOffsets": "9112,9409,9513,9622,9742,9839,9913"
                     }
                 }
             ]
