@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ietiansdiary/LoginScreen.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
+final TitteStyle = GoogleFonts.poppins( textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w500) ) ;
+final BodyStyle = GoogleFonts.poppins( textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w300) ) ;
 class OnBoardingPagesScreen extends StatelessWidget {
   const OnBoardingPagesScreen({Key? key}) : super(key: key);
   @override
@@ -24,6 +27,7 @@ class OnBoardingPagesScreen extends StatelessWidget {
             style: TextStyle(
                 fontSize: 17, fontWeight: FontWeight.w500, color: Colors.blue)),
         next: const Icon(Icons.arrow_forward_outlined, size: 17),
+        
         onChange: (index) {
           print("$index selected");
         },
@@ -46,9 +50,9 @@ class OnBoardingPagesScreen extends StatelessWidget {
                     "https://blog.darwinbox.com/hubfs/virtual-onboarding.png")),
             decoration: PageDecoration(
               bodyTextStyle:
-                  const TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
+                  BodyStyle,
               titleTextStyle:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  TitteStyle,
               bodyPadding: const EdgeInsets.all(24).copyWith(bottom: 0),
               imagePadding: const EdgeInsets.all(24),
               pageColor: Colors.white,
@@ -64,9 +68,9 @@ class OnBoardingPagesScreen extends StatelessWidget {
                     "https://cdn-icons-png.flaticon.com/512/4862/4862651.png")),
             decoration: PageDecoration(
               bodyTextStyle:
-                  const TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
+                  BodyStyle,
               titleTextStyle:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  TitteStyle,
               bodyPadding: const EdgeInsets.all(24).copyWith(bottom: 0),
               imagePadding: const EdgeInsets.all(24),
               pageColor: Colors.white,
@@ -82,9 +86,9 @@ class OnBoardingPagesScreen extends StatelessWidget {
                     "https://static.wixstatic.com/media/9c185e_53a76652f5254d1c91dd187c53e2e30e~mv2.png/v1/fill/w_640,h_360,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9c185e_53a76652f5254d1c91dd187c53e2e30e~mv2.png")),
             decoration: PageDecoration(
               bodyTextStyle:
-                  const TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
+                  BodyStyle,
               titleTextStyle:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  TitteStyle,
               bodyPadding: const EdgeInsets.all(24).copyWith(bottom: 0),
               imagePadding: const EdgeInsets.all(24),
               pageColor: Colors.white,

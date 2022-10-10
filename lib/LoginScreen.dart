@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
-
+//import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens.dart';
+
+final textstyle = TextStyle(
+  color: Color.fromRGBO(58, 58, 58, 1),
+  //fontFamily: 'Poppins',
+  fontSize: 18,
+  letterSpacing: 0,
+  fontWeight: FontWeight.w400,
+  height: 1,
+);
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -21,27 +31,22 @@ class _LoginScreenState extends State<LoginScreen> {
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 30),
-            Image.asset("assets/images/Students1.png", colorBlendMode: BlendMode.darken, ),
+            Image.asset(
+              "assets/images/Students1.png",
+              colorBlendMode: BlendMode.darken,
+            ),
             const SizedBox(height: 50),
-            const Text("Let’s get you started,",
+            Text("Let’s get you started,",
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Color.fromRGBO(58, 58, 58, 1),
-                    fontFamily: 'Poppins',
-                    fontSize: 18,
-                    letterSpacing: 0,
-                    fontWeight: FontWeight.normal,
-                    height: 1)),
+                style: GoogleFonts.poppins(
+                  textStyle: textstyle,
+                )),
             const SizedBox(height: 5),
-            const Text("Sign in below to continue",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Color.fromRGBO(58, 58, 58, 1),
-                    fontFamily: 'Poppins',
-                    fontSize: 18,
-                    letterSpacing: 0,
-                    fontWeight: FontWeight.normal,
-                    height: 1)),
+            Text(
+              "Sign in below to continue",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.poppins(textStyle: textstyle),
+            ),
             const SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 60.0),
@@ -64,16 +69,18 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 25,
                       ),
                       const SizedBox(width: 10),
-                      const Text(
+                      Text(
                         'Sign in with Google',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: GoogleFonts.openSans(
+                          textStyle: const TextStyle(
                             color: Color.fromRGBO(19, 19, 19, 1),
-                            fontFamily: 'Open Sans',
+                            //fontFamily: 'Open Sans',
                             fontSize: 16,
                             letterSpacing: 0,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w600,
                             height: 1),
+                        )
                       )
                     ],
                   ),
@@ -82,17 +89,18 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const SizedBox(height: 40),
             RichText(
-              text: const TextSpan(
+              text: TextSpan(
                 children: <TextSpan>[
                   TextSpan(
                       text: "By signing in you agree to our ",
-                      style: TextStyle(fontSize: 10, color: Colors.black)),
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(fontSize: 10, color: Colors.black, fontWeight: FontWeight.w400 )
+                      )),
                   TextSpan(
                       text: "terms & conditions.",
-                      style: TextStyle(
-                          fontSize: 11,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold))
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(fontSize: 10, color: Colors.blueAccent, fontWeight: FontWeight.w400 )
+                      ) ),
                 ],
               ),
             ),

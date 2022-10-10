@@ -1,6 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:ietiansdiary/SelectBranchAndSemForSyllabus.dart';
 
 class SelectBranchAndSemesterForNotes extends StatefulWidget {
   const SelectBranchAndSemesterForNotes({Key? key}) : super(key: key);
@@ -48,7 +50,7 @@ class _SelectBranchAndSemesterForNotesState
                   child: Row(
                     children: [
                       Icon(Icons.arrow_back_ios, size: 20),
-                      Text("Select", style: TextStyle(fontSize: 15)),
+                      Text("Select", style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 15)) ),
                     ],
                   ),
                 ),
@@ -60,7 +62,7 @@ class _SelectBranchAndSemesterForNotesState
             Row(children: [
               Text("Select Branch",
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+                  style: PrimaryTextStyle ),
             ]),
             SizedBox(height: 13),
             SingleChildScrollView(
@@ -315,7 +317,7 @@ class _SelectBranchAndSemesterForNotesState
             Row(children: [
               Text("Select Semester",
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+                  style: PrimaryTextStyle ),
             ]),
             SizedBox(height: 13),
             SingleChildScrollView(

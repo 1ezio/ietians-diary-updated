@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+final PrimaryTextStyle = GoogleFonts.poppins(textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w500));
 
 class SelectBranchAndSemesterForSyllabus extends StatefulWidget {
   const SelectBranchAndSemesterForSyllabus({Key? key}) : super(key: key);
@@ -46,7 +49,7 @@ class _SelectBranchAndSemesterForSyllabusState extends State<SelectBranchAndSeme
                     child: Row(
                       children: [
                         Icon(Icons.arrow_back_ios, size: 20),
-                        Text("Select", style: TextStyle(fontSize: 15)),
+                        Text("Select", style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 15)) ),
                       ],
                     ),
                   ),
@@ -58,8 +61,8 @@ class _SelectBranchAndSemesterForSyllabusState extends State<SelectBranchAndSeme
               Row(children: [
                 Text("Select Branch",
                     textAlign: TextAlign.left,
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+                    style: PrimaryTextStyle  ,
+                        ),
               ]),
               SizedBox(height: 13),
               SingleChildScrollView(
@@ -314,8 +317,8 @@ class _SelectBranchAndSemesterForSyllabusState extends State<SelectBranchAndSeme
               Row(children: [
                 Text("Select Semester",
                     textAlign: TextAlign.left,
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+                    style: PrimaryTextStyle
+                        ),
               ]),
               SizedBox(height: 13),
               SingleChildScrollView(

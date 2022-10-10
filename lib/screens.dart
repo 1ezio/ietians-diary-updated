@@ -5,6 +5,7 @@ import 'InternalScreens/ProfilePage.dart';
 import 'InternalScreens/SearchPage.dart';
 import 'InternalScreens/UploadPage.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InternalScreens extends StatefulWidget {
   const InternalScreens({Key? key}) : super(key: key);

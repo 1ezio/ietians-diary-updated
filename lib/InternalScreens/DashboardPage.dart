@@ -1,9 +1,48 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:ietiansdiary/RoadMaps.dart';
 import 'package:ietiansdiary/SelectBranchAndSemForNotes.dart';
 import 'package:ietiansdiary/SelectBranchAndSemForPreviousYearPapers.dart';
 import 'package:ietiansdiary/SelectBranchAndSemForSyllabus.dart';
+
+final NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard = TextStyle(
+  color: Colors.black,
+  //fontFamily: 'Poppins',
+  fontSize: 18,
+  letterSpacing: 0,
+  fontWeight: FontWeight.w500,
+  height: 1,
+);
+
+final FeatuerTextStyle = GoogleFonts.openSans(
+    textStyle: TextStyle(
+        fontWeight: FontWeight.w600, fontSize: 13, color: Colors.grey));
+
+final SecondaryLinesTextStyle = GoogleFonts.poppins(
+  textStyle: TextStyle(
+    color: Colors.black,
+    //fontFamily: 'Poppins',
+    fontSize: 15,
+    letterSpacing: 0,
+    fontWeight: FontWeight.w400,
+    height: 1,
+  ),
+);
+
+final SecondaryLinesTextStyleInGreyColor = GoogleFonts.poppins(
+  textStyle: TextStyle(
+    color: Colors.grey,
+    //fontFamily: 'Poppins',
+    fontSize: 15,
+    letterSpacing: 0,
+    fontWeight: FontWeight.w400,
+    height: 1,
+  ),
+);
+
+final Join_Now_Button_TextStyle = GoogleFonts.poppins(textStyle:TextStyle(fontWeight:FontWeight.w700,fontSize:12,color:Colors.white));
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -36,6 +75,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 children: [
                   const CircleAvatar(
                     maxRadius: 40,
+                    backgroundColor: Colors.black,
                     backgroundImage: NetworkImage(
                         "https://www.seekpng.com/png/full/356-3562377_personal-user.png"),
                   ),
@@ -49,10 +89,12 @@ class _DashboardPageState extends State<DashboardPage> {
               Column(children: [
                 Row(
                   children: [
-                    const Text("Good Morning",
+                    Text("Good Morning",
                         textAlign: TextAlign.left,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20)),
+                        style: GoogleFonts.poppins(
+                          textStyle:
+                              NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard,
+                        )),
                     const SizedBox(width: 6),
                     Image.asset(
                       "assets/images/hello.png",
@@ -61,26 +103,21 @@ class _DashboardPageState extends State<DashboardPage> {
                   ],
                 ),
                 const SizedBox(height: 5),
-                Row(children: const [
-                  Text(
-                    "Username",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
+                Row(children: [
+                  Text("Username",
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.poppins(
+                        textStyle:
+                            NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard,
+                      )),
                 ]),
                 const SizedBox(height: 7),
                 // ignore: prefer_const_literals_to_create_immutables
                 Row(children: [
-                  const Text(
+                  Text(
                     "NEW FEATURE",
                     textAlign: TextAlign.left,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13,
-                        color: Colors.grey),
+                    style: FeatuerTextStyle,
                   ),
                 ]),
               ]),
@@ -108,14 +145,13 @@ class _DashboardPageState extends State<DashboardPage> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    const Text("Discussion Forum",
+                                    Text("Discussion Forum",
                                         textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 25)),
-                                    const SizedBox(
-                                      width: 13,
-                                    ),
+                                        style: GoogleFonts.poppins(
+                                          textStyle:
+                                              NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard,
+                                        )),
+                                    const SizedBox(width: 13),
                                     Image.asset(
                                       "assets/images/chat.png",
                                       height: 25,
@@ -123,16 +159,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                   ],
                                 ),
                               ),
-                              const SizedBox(
-                                height: 7
-                              ),
-                              const Padding(
+                              const SizedBox(height: 7),
+                              Padding(
                                 padding: EdgeInsets.only(left: 10),
                                 child: Text(
                                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                                    style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w600)),
+                                    style: SecondaryLinesTextStyle),
                               ),
                               const SizedBox(height: 5),
                               Row(
@@ -182,10 +214,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                                   radius: 15,
                                                   backgroundColor: Colors.black,
                                                   child: CircleAvatar(
-                                                    radius: 15,
-                                                    backgroundImage: NetworkImage(OverlappingImages[i])
-                                                        
-                                                  ),
+                                                      radius: 15,
+                                                      backgroundColor: Colors.black,
+                                                      backgroundImage:
+                                                          NetworkImage(
+                                                              OverlappingImages[
+                                                                  i])),
                                                 ),
                                               ),
                                           ],
@@ -202,7 +236,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                       ],
                                     ),
                                   ),
-                                  
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       primary: Colors.black, // Background color
@@ -210,7 +243,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                           .white, // Text Color (Foreground color)
                                     ),
                                     onPressed: () {},
-                                    child: const Text("Join Now"),
+                                    child: Text("Join Now" ,style: Join_Now_Button_TextStyle , ),
                                     clipBehavior: Clip.antiAlias,
                                   )
                                 ],
@@ -240,11 +273,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    const Text("Discussion Forum",
+                                    Text("Discussion Forum",
                                         textAlign: TextAlign.left,
-                                        style: const TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 25)),
+                                        style: GoogleFonts.poppins(
+                                          textStyle:
+                                              NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard,
+                                        )),
                                     const SizedBox(
                                       width: 13,
                                     ),
@@ -255,23 +289,17 @@ class _DashboardPageState extends State<DashboardPage> {
                                   ],
                                 ),
                               ),
-                              const SizedBox(
-                                height: 7
-                              ),
-                              const Padding(
+                              const SizedBox(height: 7),
+                              Padding(
                                 padding: EdgeInsets.only(left: 10),
-                                child: const Text(
+                                child: Text(
                                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                                    style: const TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w600)),
+                                    style: SecondaryLinesTextStyle),
                               ),
                               const SizedBox(height: 5),
                               Row(
                                 children: [
-                                  const SizedBox(
-                                    width: 10
-                                  ),
+                                  const SizedBox(width: 10),
                                   TextButton(
                                     onPressed: () {},
                                     child: const Text("Interviews"),
@@ -281,9 +309,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                           Colors.white54, // Background Color
                                     ),
                                   ),
-                                  const SizedBox(
-                                    width: 9
-                                  ),
+                                  const SizedBox(width: 9),
                                   TextButton(
                                     onPressed: () {},
                                     child: const Text("Exams"),
@@ -314,10 +340,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                                   radius: 15,
                                                   backgroundColor: Colors.black,
                                                   child: CircleAvatar(
-                                                    radius: 15,
-                                                    backgroundImage: NetworkImage(OverlappingImages[i])
-                                                        
-                                                  ),
+                                                      radius: 15,
+                                                      backgroundColor: Colors.black,
+                                                      backgroundImage:
+                                                          NetworkImage(
+                                                              OverlappingImages[
+                                                                  i])),
                                                 ),
                                               ),
                                           ],
@@ -342,7 +370,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                           .white, // Text Color (Foreground color)
                                     ),
                                     onPressed: () {},
-                                    child: const Text("Join Now"),
+                                    child: Text("Join Now" , style: Join_Now_Button_TextStyle,),
                                     clipBehavior: Clip.antiAlias,
                                   )
                                 ],
@@ -372,11 +400,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    const Text("Discussion Forum",
+                                    Text("Discussion Forum",
                                         textAlign: TextAlign.left,
-                                        style: const TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 25)),
+                                        style: GoogleFonts.poppins(
+                                            textStyle:
+                                                NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard)),
                                     const SizedBox(
                                       width: 13,
                                     ),
@@ -387,16 +415,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                   ],
                                 ),
                               ),
-                              const SizedBox(
-                                height: 7
-                              ),
-                              const Padding(
+                              const SizedBox(height: 7),
+                              Padding(
                                 padding: EdgeInsets.only(left: 10),
-                                child: const Text(
+                                child: Text(
                                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                                    style: const TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w600)),
+                                    style: SecondaryLinesTextStyle),
                               ),
                               const SizedBox(height: 5),
                               Row(
@@ -446,10 +470,12 @@ class _DashboardPageState extends State<DashboardPage> {
                                                   radius: 15,
                                                   backgroundColor: Colors.black,
                                                   child: CircleAvatar(
-                                                    radius: 15,
-                                                    backgroundImage: NetworkImage(OverlappingImages[i])
-                                                        
-                                                  ),
+                                                      radius: 15,
+                                                      backgroundColor: Colors.black,
+                                                      backgroundImage:
+                                                          NetworkImage(
+                                                              OverlappingImages[
+                                                                  i])),
                                                 ),
                                               ),
                                           ],
@@ -474,7 +500,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                           .white, // Text Color (Foreground color)
                                     ),
                                     onPressed: () {},
-                                    child: const Text("Join Now"),
+                                    child: Text("Join Now",style: Join_Now_Button_TextStyle,),
                                     clipBehavior: Clip.antiAlias,
                                   )
                                 ],
@@ -491,12 +517,8 @@ class _DashboardPageState extends State<DashboardPage> {
               const SizedBox(height: 25),
               // ignore: prefer_const_literals_to_create_immutables
               Row(children: [
-                const Text("ALL FEATURE",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13,
-                        color: Colors.grey)),
+                Text("ALL FEATURE",
+                    textAlign: TextAlign.left, style: FeatuerTextStyle),
               ]),
               const SizedBox(height: 10),
               InkWell(
@@ -526,25 +548,19 @@ class _DashboardPageState extends State<DashboardPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           "Syllabus",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                          style: GoogleFonts.poppins(
+                            textStyle:
+                                NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard,
+                          ),
                         ),
-                        Text(
-                          "Lorem Ipsum is",
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.grey),
-                        ),
+                        Text("Lorem Ipsum is",
+                            style: SecondaryLinesTextStyleInGreyColor),
                         Text(
                           "simply dummy text.",
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.grey),
+                          style: SecondaryLinesTextStyleInGreyColor,
                         ),
                         SizedBox(
                           height: 30,
@@ -587,29 +603,22 @@ class _DashboardPageState extends State<DashboardPage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           "Previous Papers",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                          style: GoogleFonts.poppins(
+                              textStyle:
+                                  NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard),
                         ),
                         Text(
                           "Lorem Ipsum is",
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.grey),
+                          style: SecondaryLinesTextStyleInGreyColor,
                         ),
                         Text(
                           "simply dummy text.",
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.grey),
+                          style: SecondaryLinesTextStyleInGreyColor,
                         ),
-                        SizedBox(
-                          height: 30,
-                        )
+                        SizedBox(height: 30)
                       ],
                     ),
                     const SizedBox(width: 8),
@@ -637,7 +646,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
-                        color: Color(0xff8beaba),
+                        color: const Color(0xff8beaba),
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: const Icon(
@@ -650,24 +659,19 @@ class _DashboardPageState extends State<DashboardPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        const Text(
+                        Text(
                           "Notes",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                          style: GoogleFonts.poppins(
+                              textStyle:
+                                  NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard),
                         ),
-                        const Text(
+                        Text(
                           "Lorem Ipsum is",
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.grey),
+                          style: SecondaryLinesTextStyleInGreyColor,
                         ),
-                        const Text(
+                        Text(
                           "simply dummy text.",
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.grey),
+                          style: SecondaryLinesTextStyleInGreyColor,
                         ),
                         const SizedBox(
                           height: 30,
@@ -681,7 +685,64 @@ class _DashboardPageState extends State<DashboardPage> {
                     )
                   ],
                 ),
-              )
+              ),
+              const SizedBox(height: 10),
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.of(context).push(CupertinoPageRoute(
+                      builder: (context) =>
+                          const RoadMaps(),
+                    ));
+                  });
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff8beaba),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: const Icon(
+                        Icons.content_paste_go_sharp,
+                        size: 60,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        Text(
+                          "Road Maps",
+                          style: GoogleFonts.poppins(
+                              textStyle:
+                                  NameHelloMsgDiscussionForumTextStyleAboveOfDashBoard),
+                        ),
+                        Text(
+                          "Lorem Ipsum is",
+                          style: SecondaryLinesTextStyleInGreyColor,
+                        ),
+                        Text(
+                          "simply dummy text.",
+                          style: SecondaryLinesTextStyleInGreyColor,
+                        ),
+                        const SizedBox(
+                          height: 30
+                        )
+                      ],
+                    ),
+                    const SizedBox(width: 8),
+                    Image.asset(
+                      "assets/images/54919.png",
+                      height: 35,
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
